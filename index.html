@@ -7,18 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body class="layout">
     <header class="header">Logo</header>
     <main class="main">
+      <div class="text-output">
+        <p id="txt-output">...</p>
+      </div>
       <div class="text-input">
-        <textarea name="txt-input" id="txt-input"></textarea>
+        <input type="text" id="txt-input" />
       </div>
       <div class="buttons-container">
-        <button class="encrypt">Encriptar</button>
-        <button class="decrypt">Desencriptar</button>
+        <button class="encrypt" onclick="encrypt()">Encriptar</button>
+        <button class="decrypt" onclick="decrypt()">Desencriptar</button>
       </div>
-      <div class="text-output">Text output</div>
     </main>
   </body>
 </html>
