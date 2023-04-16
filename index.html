@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
-  <body class="layout">
-    <header class="header">Logo</header>
+  <body>
+    <header class="header">
+      <img src="logo.svg" />
+    </header>
     <main class="main">
       <div class="text-output">
-        <p id="txt-output">...</p>
+        <p id="txt-output">Ningún mensaje fue encontrado</p>
       </div>
       <div class="text-input">
-        <input type="text" id="txt-input" />
+        <textarea
+          type="text"
+          id="txt-input"
+          placeholder="Inserte el texto aquí"
+        ></textarea>
       </div>
       <div class="buttons-container">
         <button class="encrypt" onclick="encrypt()">Encriptar</button>
