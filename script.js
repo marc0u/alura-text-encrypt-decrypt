@@ -15,7 +15,9 @@ function getTxt() {
 }
 
 function encrypt() {
-  const txt = getTxt();
+  const txt = getTxt()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
   let result = "";
   for (let index = 0; index < txt.length; index++) {
     let char = txt.charAt(index);
@@ -39,17 +41,19 @@ function encrypt() {
         result = result + char;
     }
   }
-  writeTxt(result);
+  result === "" ? writeTxt("Ningún mensaje fue encontrado") : writeTxt(result);
 }
 
 function decrypt() {
-  let txt = getTxt();
+  let txt = getTxt()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
   txt = txt.replaceAll(e, "e");
   txt = txt.replaceAll(i, "i");
   txt = txt.replaceAll(a, "a");
   txt = txt.replaceAll(o, "o");
   txt = txt.replaceAll(u, "u");
-  writeTxt(txt);
+  txt === "" ? writeTxt("Ningún mensaje fue encontrado") : writeTxt(txt);
 }
 
 const copyContent = async () => {
