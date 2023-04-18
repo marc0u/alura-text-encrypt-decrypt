@@ -51,3 +51,8 @@ function decrypt() {
   txt = txt.replaceAll(u, "u");
   writeTxt(txt);
 }
+
+const copyContent = async () => {
+  let text = document.getElementById("txt-output").innerHTML;
+  await navigator.clipboard.writeText(text);
+};

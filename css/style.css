@@ -27,9 +27,19 @@ html, body {
 }
 
 .text-output {
+    position: relative;
     background-color: #1e1e1e;
     height: 200px;
     border-radius: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.text-output:hover {
+    background-color: rgba(187, 134, 252, 0.1);
+}
+
+.text-output:active {
+    background-color: #BB86FC;
 }
 
 .buttons-container {
@@ -82,9 +92,30 @@ button:hover {
     font-size: 1rem;
 }
 
-img {
+
+.logo {
     height: 60%;
     margin-left: 1rem;
+}
+
+.icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.icon img {
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.5rem;
+}
+
+#copied {
+    font-size: 0rem;
+}
+
+.text-output:active > div #copied {
+    font-size: 1rem;
 }
 
 textarea {

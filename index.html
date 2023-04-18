@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="script.js"></script>
   </head>
   <body>
     <header class="header">
-      <img src="logo.svg" />
+      <img class="logo" src="./img/logo.svg" />
     </header>
     <main class="main">
-      <div class="text-output">
+      <div class="text-output" onclick="copyContent()">
         <p id="txt-output">Ningún mensaje fue encontrado</p>
+        <div class="icon">
+          <span id="copied">Copiado!</span>
+          <img src="./img/copy.svg" />
+        </div>
       </div>
       <div class="text-input">
         <textarea
